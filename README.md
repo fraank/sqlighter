@@ -1,8 +1,9 @@
 # Sqlighter
 
-structure definition of an sqlite database with one hash.
+schema definition for static sqlite dbs. Define you sqlite database with one hash.
 
-TODO: Delete this and the text above, and describe your gem
+best for small static website projects where the db is included in the repository.
+
 
 ## Installation
 
@@ -24,13 +25,19 @@ Or install it yourself as:
 
 ```ruby
 sl = Sqlighter.new("test.db")
-  sl.schema({
-    test_table: {
-      col1: [ "VARCHAR(100)" ],
-      col2: [ "VARCHAR(101)" ]
-    }
-  })
+sl.schema({
+  test_table: {
+    col1: [ "VARCHAR(100)" ],
+    col2: [ "VARCHAR(101)" ]
+  }
+})
 ```
+
+## ToDo
+
+- delete fields
+- change rows
+
 
 ## Development
 
